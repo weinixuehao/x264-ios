@@ -1,0 +1,75 @@
+checking for -arch x86_64... yes
+x264 configure script
+Command line options: "--enable-static" "--enable-pic" "--disable-cli" "--extra-cflags=-arch" "x86_64" "-mios-simulator-version-min=7.0" "--extra-ldflags=-arch" "x86_64" "-mios-simulator-version-min=7.0" "--prefix=/Users/user/Documents/workspace_ios/WCLRecordVideo/WCLRecordVideo/FFmpeg-iOS-build-script/x264-iOS-build-script/thin-x264/x86_64"
+
+checking whether xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch x86_64 works... yes
+checking whether xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch x86_64 supports for( int i = 0; i < 9; i++ ); with -std=gnu99... yes
+checking for -mpreferred-stack-boundary=5... no
+Failed commandline was:
+--------------------------------------------------
+xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch x86_64 conftest.c -m64  -Wall -I. -I$(SRCPATH) -arch x86_64 -mios-simulator-version-min=7.0 -arch x86_64 -std=gnu99 -D_GNU_SOURCE  -mpreferred-stack-boundary=5  -m64  -arch x86_64 -mios-simulator-version-min=7.0 -lm -arch x86_64 -o conftest
+clang: error: unknown argument: '-mpreferred-stack-boundary=5'
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main (void) {  return 0; }
+--------------------------------------------------
+checking whether yasm supports vpmovzxwd ymm0, xmm0... yes
+checking whether xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch x86_64 supports __asm__("pabsw %xmm0, %xmm0");... yes
+checking for pthread_create(0,0,0,0); in pthread.h... yes
+checking for return log2f(2); in math.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch x86_64 conftest.c -m64  -Wall -I. -I$(SRCPATH) -arch x86_64 -mios-simulator-version-min=7.0 -arch x86_64 -std=gnu99 -D_GNU_SOURCE  -Werror  -m64  -arch x86_64 -mios-simulator-version-min=7.0 -lm -arch x86_64 -lpthread -o conftest
+error: unknown warning option '-Werror=unused-command-line-argument-hard-error-in-future'; did you mean '-Werror=unused-command-line-argument'? [-Werror,-Wunknown-warning-option]
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <math.h>
+int main (void) { return log2f(2); return 0; }
+--------------------------------------------------
+checking whether defined(MAP_PRIVATE) is true... yes
+checking for uint32_t test_vec __attribute__ ((vector_size (16))) = {0,1,2,3}; in stdint.h... yes
+checking for stdio.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch x86_64 conftest.c -m64  -Wall -I. -I$(SRCPATH) -arch x86_64 -mios-simulator-version-min=7.0 -arch x86_64 -std=gnu99 -D_GNU_SOURCE -fPIC  -shared -Wl,-Bsymbolic  -m64  -arch x86_64 -mios-simulator-version-min=7.0 -lm -arch x86_64 -lpthread -o conftest
+warning: unknown warning option '-Werror=unused-command-line-argument-hard-error-in-future'; did you mean '-Werror=unused-command-line-argument'? [-Wunknown-warning-option]
+1 warning generated.
+ld: unknown option: -Bsymbolic
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <stdio.h>
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for -fno-tree-vectorize... yes
+checking for fseeko(stdin,0,0); in stdio.h... yes
+checking for -Wshadow... yes
+checking for -Wmaybe-uninitialized... yes
+
+platform:      X86_64
+byte order:    little-endian
+system:        MACOSX
+cli:           no
+libx264:       internal
+shared:        no
+static:        yes
+asm:           yes
+interlaced:    yes
+avs:           no
+lavf:          no
+ffms:          no
+mp4:           no
+gpl:           yes
+thread:        posix
+opencl:        yes
+filters:       crop select_every 
+lto:           no
+debug:         no
+gprof:         no
+strip:         no
+PIC:           yes
+bit depth:     8
+chroma format: all
